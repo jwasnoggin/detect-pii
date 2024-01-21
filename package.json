@@ -1,11 +1,15 @@
 {
-  "name": "redact-pii",
-  "version": "4.0.2",
-  "description": "Remove personally identifiable information from text.",
+  "name": "detect-pii",
+  "version": "4.1.0",
+  "description": "Detect and remove personally identifiable information from text.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "files": [
+    "./lib/**/*"
+  ],
   "scripts": {
     "build": "del lib && tsc --pretty",
+    "prepare": "npm run build",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run verify_all && npm run build",
     "verify_all": "npm run typecheck && npm test && npm run test_prettier",
@@ -15,9 +19,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/solvvy/redact-pii.git"
+    "url": "https://github.com/jwasnoggin/detect-pii.git"
   },
-  "author": "Christian Theilemann <christian@solvvy.com>",
+  "author": "Christian Theilemann <christian@solvvy.com>, James Wassink <jwassink@noggin.com.au",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.21"
